@@ -1,0 +1,40 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: linear-gradient(90deg, #e2e2e2 19px, transparent 1%) center, linear-gradient(#e2e2e2 19px, transparent 1%) center, #c0bdc7;
+  background-size: 22px 22px;
+  padding: 20px 40px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.single-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.span__settings {
+  font-weight: 600;
+}
+
+.flag {
+  width: 400px;
+  margin-left: 100px;
+}
+/*# sourceMappingURL=main.css.map */
