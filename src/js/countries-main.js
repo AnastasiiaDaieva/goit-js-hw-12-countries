@@ -1,7 +1,7 @@
-import fetchCountries from './fetchCountries';
-import refs from './refs';
-import singleItemTemplate from '../templates/singleItem.hbs';
+import refs from './refs.js';
 import { debounce } from 'lodash';
+import fetchCountries from './fetchCountries.js';
+
 const { accessInput, singleItem } = refs;
 
 const BASE_URL = 'https://restcountries.eu/rest/v2';

@@ -8,7 +8,7 @@ export default function generateSingle(data) {
     const { capital, population, name, flag, languages } = elem;
 
     const newElem = singleItemTemplate(elem);
-
+    console.log(languages);
     return newElem;
   });
 }
