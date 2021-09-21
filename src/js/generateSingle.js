@@ -5,10 +5,7 @@ const { accessUl } = refs;
 export default function generateSingle(data) {
   accessUl.innerHTML = '';
   return data.map(elem => {
-    const { capital, population, name, flag, languages } = elem;
-
     const newElem = singleItemTemplate(elem);
-    console.log(languages);
     return newElem;
   });
 }

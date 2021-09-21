@@ -9,7 +9,10 @@ export default function manageSearch(data) {
   if (data.length !== 1) {
     if (data.length < 11) {
       handleArray(data);
+      console.log(data);
     } else if (data.status > 200) {
+      console.log(data);
+
       const notFound = notice({
         text: "The country wasn't found.",
       });
