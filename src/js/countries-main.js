@@ -1,17 +1,15 @@
 import refs from './refs.js';
 import { debounce } from 'lodash';
 import fetchCountries from './fetchCountries.js';
+import manageSearch from './manageSearch.js';
 
-const { accessInput, singleItem } = refs;
-
-const BASE_URL = 'https://restcountries.eu/rest/v2';
-const endPoint = '/name';
+const { accessInput, accessUl, singleItem } = refs;
 
 function assignValue(e) {
   singleItem.innerHTML = '';
-  let value = `/${e.target.value}`;
-  let query = BASE_URL + endPoint + value;
-  fetchCountries(query);
+  let query = e.target.value.trim();
+  fetchCountries(query).then(data => manageSearch(data));
+  accessUl.innerHTML = '';
 }
 
 function getValue() {

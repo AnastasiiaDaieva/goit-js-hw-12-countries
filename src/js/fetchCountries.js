@@ -1,12 +1,8 @@
-import refs from './refs';
-import manageSearch from './manageSearch';
-
-const { accessUl } = refs;
-
+const BASE_URL = 'https://restcountries.eu/rest/v2';
 export default function fetchCountries(searchQuery) {
-  fetch(searchQuery)
-    .then(response => response.json())
-    .then(data => manageSearch(data))
-    .catch(err => console.log(err))
-    .finally((accessUl.innerHTML = ''));
+  return fetch(`${BASE_URL}/name/${searchQuery}`)
+    .then(response => {
+      if (response.ok) return response.json();
+    })
+    .catch(err => console.error(err));
 }
